@@ -9,6 +9,7 @@ foreach($items as $item) {
     $url = parse_url($item);
     $url = $url['scheme']."://oauth2:".getenv("GITLAB_TOKEN")."@".$url["host"].$url["path"];
     print "git clone $url \r\n";
+    exec("git clone $url");
 }
 
 function GetProjects() {
