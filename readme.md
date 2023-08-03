@@ -11,4 +11,5 @@ docker run \
 -it \
 -e GITLAB_TOKEN="YOUR_SUPER_SECRET_TOKEN_GOES_HERE" \
 -e GITLAB_HOST="https://LookMa.imma.git.host.example.com" \
+-v $(pwd)/data:/data \
 gitlab-backups
